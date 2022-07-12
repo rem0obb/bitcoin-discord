@@ -30,7 +30,7 @@ int main(void)
                                          btc.convert_btc("BRL", btc_ctr.at("last").dump()), std::to_string(result_clock));
 
         // ALERT
-        if (btc_ctr.at("last").dump()[0] == '2') // 2 bitcoin valued to 200,000!!
+        if (btc_ctr.at("last").dump()[0] == '2' && BTC_COUNTRY == "BRL") // 2 bitcoin valued to 200,000!!
             discord.send_msg_discord("```INI\n🚨 SELL YOUR BITCOIN NOW, YOU WILL PROFIT 100% FROM YOUR INVESTMENT BITCOIN VALUED TO R$=200,000 !!🚨 \n\n BITCOIN ::: R$=[" + btc_ctr.at("last").dump() + "]```");
 
         // send msg for webhook
